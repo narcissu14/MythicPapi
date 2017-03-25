@@ -1,0 +1,5 @@
+name: MythicPapi
+main: com.narcissu14.mythicpapi.MythicPapi
+author: Narcissu14
+version: 1.0
+depend: [MythicMobs,PlaceholderAPI]
