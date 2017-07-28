@@ -1,4 +1,4 @@
-package com.narcissu14.mythicpapi;
+package com.narcissu14.mythicpapi.conditions;
 
 import io.lumine.xikage.mythicmobs.adapters.AbstractEntity;
 import io.lumine.xikage.mythicmobs.io.MythicLineConfig;
@@ -28,20 +28,7 @@ public class mmPapiCondition extends SkillCondition implements IEntityCondition 
             Player player = (Player)target.asPlayer().getBukkitEntity();
             String newPL = PlaceholderAPI.setPlaceholders(player, this.placeholderLeft);
             String newPR = PlaceholderAPI.setPlaceholders(player, this.placeholderRight);
-            switch (this.operator){
-                case "==":
-                    if (newPL.equals(newPR)){
-                        return true;
-                    }
-                    return false;
-                case "!=":
-                    if (!newPL.equals(newPR)){
-                        return true;
-                    }
-                    return false;
-                default:
-                    return checkPlaceholder(newPL, newPR);
-            }
+            return checkPlaceholder(newPL, newPR);
         }
         return false;
     }
@@ -56,14 +43,18 @@ public class mmPapiCondition extends SkillCondition implements IEntityCondition 
             return false;
         }
         switch (this.operator){
+            case "==":
+                return newPL.equals(newPR);
+            case "!=":
+                return !newPL.equals(newPR);
             case "<=":
-                return (numPL <= numPR) ? true : false;
+                return (numPL <= numPR);
             case ">=":
-                return (numPL >= numPR) ? true : false;
+                return (numPL >= numPR);
             case "<":
-                return (numPL < numPR) ? true : false;
+                return (numPL < numPR);
             case ">":
-                return (numPL > numPR) ? true : false;
+                return (numPL > numPR);
             default:
                 break;
         }

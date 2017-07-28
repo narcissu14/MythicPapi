@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="MythicMobs">
+    <CLASSES>
+      <root url="jar://F:/--==[ 插件依赖库 ]==--/spigot-1.11.2.jar!/" />
+      <root url="jar://F:/--==[ 插件依赖库 ]==--/PlaceholderAPI.jar!/" />
+      <root url="jar://F:/--==[ 插件依赖库 ]==--/MythicMobs.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://F:/--==[ 插件依赖库 ]==--/spigot-1.11.2.jar!/" />
+    </SOURCES>
+  </library>
+</component>
