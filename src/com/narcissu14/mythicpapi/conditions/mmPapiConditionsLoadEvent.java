@@ -14,6 +14,12 @@ public class mmPapiConditionsLoadEvent implements Listener {
         } else if (e.getConditionName().equalsIgnoreCase("papirange")) {
             SkillCondition sc = new mmPapiRangeCondition(e.getConfig().getLine(), e.getConfig());
             e.register(sc);
+        } else if (e.getConditionName().equalsIgnoreCase("invitem")) {
+            SkillCondition sc = new mmItemInvLocCondition(e.getConfig().getLine(), e.getConfig());
+            e.register(sc);
+        } else if (e.getConditionName().equalsIgnoreCase("mainhand")) {
+            SkillCondition sc = new mmMainHandItemCondition(e.getConfig().getLine(), e.getConfig());
+            e.register(sc);
         }
     }
 }
